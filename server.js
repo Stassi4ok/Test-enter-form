@@ -26,5 +26,5 @@ app.get("/", (req, res) => {
 // Використання маршруту auth
 app.use("/api/auth", authRoutes);
 
-const PORT = 5001;
+const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

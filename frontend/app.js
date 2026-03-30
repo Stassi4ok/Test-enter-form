@@ -7,7 +7,7 @@ registerForm.addEventListener("submit", async (e) => {
   const email = registerForm.email.value;
   const password = registerForm.password.value;
 
-  const res = await fetch("https://test-enter-form2.vercel.app/api/register", {
+  const res = await fetch("https://test-enter-form2.vercel.app/routes/auth/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })
@@ -23,7 +23,7 @@ loginForm.addEventListener("submit", async (e) => {
   const email = loginForm.email.value;
   const password = loginForm.password.value;
 
-  const res = await fetch("https://test-enter-form2.vercel.app/api/login", {
+  const res = await fetch("http://localhost:5001/api/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })

@@ -16,6 +16,7 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: "Registration failed" });
   }
+  console.log(123)
 });
 
 // Логін
