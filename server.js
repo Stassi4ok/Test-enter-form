@@ -13,6 +13,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const authRoutes = require("./routes/auth");
+app.use("/auth", authRoutes); // <-- ключове
+
+app.listen(PORT, () => console.log("Server running"));
+
 // Підключення до MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
